@@ -1,0 +1,302 @@
+/* ========================= */
+/* === CONFIGURACIÓN BASE === */
+/* ========================= */
+
+.carreras {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.carreras article {
+    background-color: #364958;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.carreras img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.carreras h3 {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    color: #ffcc00;
+}
+
+.carreras p {
+    font-size: 1rem;
+    margin-top: 5px;
+}
+
+/* Diseño responsive */
+@media (max-width: 900px) {
+    .carreras {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .carreras {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: #2c3e50;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+article {
+    max-width: 2000px;
+    margin: 20px auto;
+    background-color: #364958;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+
+    .presentacion {
+        max-width: 5000px;
+        margin: 40px auto;
+        padding: 20px;
+        background-color: #364958;
+        color: #ffffff;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        text-align: center;
+    }
+    .titulo {
+        font-size: 1.8rem;
+        font-weight: bold;
+        margin-bottom: 15px;
+    }
+    .descripcion, p {
+        font-size: 1rem;
+        margin-bottom: 15px;
+    }
+    h2 {
+        color: #ffcc00;
+        margin-top: 20px;
+    }
+    ul {
+        list-style: none;
+        padding: 0;
+    }
+    ul li {
+        font-size: 1rem;
+        margin-bottom: 10px;
+    }
+    .inscripcion {
+        font-size: 1.2rem;
+        font-weight: bold;
+        margin-top: 20px;
+    }
+/* ========================= */
+/* === ENLACES GENERALES === */
+/* ========================= */
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+/* ========================= */
+/* === CABECERA Y LOGO === */
+/* ========================= */
+
+header {
+    display: flex;
+    min-height: 70px;
+    background-color: #55828B;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px;
+    margin-right: 10px;
+}
+
+header .logo h2 {
+    font-size: 1.5rem;
+    color: white;
+}
+
+/* ========================= */
+/* === MENÚ DE NAVEGACIÓN === */
+/* ========================= */
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    width: 100%;
+    max-width: 3200px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.nav {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* ==== Estilos de los elementos del menú ==== */
+.nav li {
+    position: relative;
+    margin-right: 10px;
+}
+
+.nav a {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    background-color: #000;
+    color: #fff;
+    font-weight: bold;
+}
+
+/* ==== Cambio de color al pasar el mouse ==== */
+.nav a:hover {
+    background-color: #434343;
+}
+
+/* ==== Íconos en el menú ==== */
+.icono {
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+/* ========================= */
+/* === SUBMENÚS === */
+/* ========================= */
+
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 140px;
+    background-color: #000;
+    padding: 0;
+    list-style: none;
+}
+
+.submenu li {
+    width: 100%;
+}
+
+.submenu a {
+    padding: 10px;
+    display: block;
+    color: white;
+    white-space: nowrap;
+}
+
+/* ==== Mostrar submenú al pasar el mouse ==== */
+.nav li:hover .submenu {
+    display: block;
+}
+
+/* ==== Ajuste para submenús dentro de submenús ==== */
+.submenu li:hover > ul {
+    display: block;
+    left: 100%;
+    top: 0;
+}
+
+/* ========================= */
+/* === TÍTULO ANIMADO === */
+/* ========================= */
+
+.nombre-empresa {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ffffff;
+    text-transform: uppercase;
+    overflow: hidden;
+    border-right: 4px solid white; /* Simula el cursor */
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: 3px;
+    width: 0;
+    animation: escribir 3s steps(12, end) forwards, brillo 1.5s infinite alternate;
+}
+
+/* ==== Animación de escritura ==== */
+@keyframes escribir {
+    from {
+        width: 0;
+    }
+    to {
+        width: 300px; /* Ajusta según el tamaño del título */
+    }
+}
+
+/* ==== Animación de brillo ==== */
+@keyframes brillo {
+    from {
+        text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff;
+    }
+    to {
+        text-shadow: 0 0 10px #ffcc00, 0 0 20px #ffcc00;
+    }
+}
+
+/* ========================= */
+/* === RESPONSIVE DESIGN === */
+/* ========================= */
+
+@media (max-width: 700px) {
+    header {
+        flex-direction: column;
+    }
+
+    nav {
+        padding: 10px 0px;
+    }
+}
+
+/* Diseño mobile-first*/
+@media (min-whit: 768px) {
+    .grid-carreras {
+        grid-template-columns: repeat(auto-ft,minimax(400px,1fr));
+    }     
+}
+/*Mobile (default) */
+@media (min-width: 576px) {/*tablet*/}
+@media (min-width: 992px) {/*Desktop*/}
+
